@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://hips.hearstapps.com/hmg-prod/images/question-mark-icon-on-white-puzzle-royalty-free-image-917901148-1558452934.jpg?crop=1.00xw:0.752xh;0,0.137xh&resize=1200:*) no-repeat center center/cover;
+}
+
+.main-container{
+    width: 70%;
+    padding: 20px;
+    background-color:white;
+    background: transparent;
+    border-radius: 10px;
+}
+.main-container .heading{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-container .container .quesn{
+    padding: 18px 0px;
+    font-size: 22px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+.main-container .container .quesn::after{
+    position: absolute;
+    content: '+';
+    right: -5px;
+    
+
+}
+
+.main-container .container .ans{
+    padding-top: 20px;
+    font-size: 22px;
+    width: 100%;
+    line-height: 1.5;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.main-container .container.active .ans{
+    height: 150px;
+
+}
+
+.main-container .container.active .quesn{
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.main-container .container.active .quesn::after{
+    content: "-";
+    font-size: 30px;
+    transition: 0.5s;
+}
